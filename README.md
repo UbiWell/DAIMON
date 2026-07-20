@@ -1,2 +1,3 @@
 # DAIMON
 AI augmented research dashboard for longitudinal sensing studies.
+To be updated soon...
