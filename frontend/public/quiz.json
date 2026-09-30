@@ -1,0 +1,38 @@
+[
+    {
+      "qid": "q1",
+      "question": "What does Learning Mode do?",
+      "choices": [
+        "Deletes views",
+        "Shows per-view explanations",
+        "Uploads data",
+        "Opens settings"
+      ],
+      "correct": "B"
+    },
+    {
+      "qid": "q2",
+      "question": "How do you add a new dashboard tile?",
+      "choices": ["Click Add View", "Drag from sidebar", "Press Enter", "Use ThemeToggle"],
+      "correct": "A"
+    },
+    {
+      "qid": "q3",
+      "question": "Which view shows quick notes?",
+      "choices": ["Stickies", "Issue Reporter"],
+      "correct": "A"
+    },
+    {
+      "qid": "q4",
+      "question": "Where can you search the knowledge base?",
+      "choices": ["User Profile", "GLOSS Search", "Data Table"],
+      "correct": "B"
+    },
+    {
+      "qid": "q5",
+      "question": "Which view build custom data visualizations?",
+      "choices": ["Data table", "NL Interface"],
+      "correct": "A"
+    }
+  ]
+  

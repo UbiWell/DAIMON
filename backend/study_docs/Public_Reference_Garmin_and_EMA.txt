@@ -1,0 +1,148 @@
+PUBLIC REFERENCE: GARMIN WEARABLE METRICS AND EMA DESIGN
+
+NOTE: This is a sample document for the GLOSS study-documents search. It
+summarizes publicly available information from Garmin's owner's manuals and
+published research on ecological momentary assessment (EMA). It is secondary
+background, not a study protocol, and it is not official guidance from Garmin
+or the authors cited. Check the original sources before relying on it.
+
+
+PART 1: GARMIN WEARABLE METRICS
+
+1.1 Heart rate variability and stress level
+Garmin watches estimate stress from heart rate variability (HRV), the
+variation in time between heartbeats. The heartbeat is regulated by the
+autonomic nervous system. Stress, like exercise, raises heart rate and lowers
+HRV. When a person is relaxed and resting, heart rate goes down and HRV goes
+up. Low HRV therefore suggests stress (the sympathetic nervous system is
+dominant), and high HRV suggests rest (the parasympathetic system is
+dominant).
+
+The watch analyzes HRV while the wearer is inactive to determine an overall
+stress level from 0 to 100:
+- 0-25: resting state
+- 26-50: low stress
+- 51-75: medium stress
+- 76-100: high stress
+
+Training, physical activity, sleep, nutrition and general life stress all
+affect stress readings. Garmin recommends wearing the watch while sleeping
+for the best results.
+
+What this means for researchers: stress scores are only produced during
+inactive periods, so gaps during exercise or walking are expected and are not
+necessarily missing data.
+
+1.2 Body Battery
+Body Battery is Garmin's estimate of the wearer's energy reserves, described
+as working like a gas gauge in a car. The watch combines heart rate
+variability, stress level, sleep quality and activity data to calculate it.
+The scale runs from 5 to 100:
+- 5-25: very low reserve energy
+- 26-50: low reserve energy
+- 51-75: medium reserve energy
+- 76-100: high reserve energy
+
+Good sleep charges Body Battery. Strenuous activity and high stress drain it
+more quickly. According to Garmin, food and caffeine do not affect it.
+Wearing the watch during sleep makes the estimate more accurate.
+
+1.3 Getting reliable wrist heart rate data
+Garmin's manuals give these tips for erratic heart rate data:
+- Clean and dry your arm before putting on the watch.
+- Avoid sunscreen, lotion and insect repellent under the watch.
+- Avoid scratching the heart rate sensor on the back of the watch.
+- Wear the watch above the wrist bone, snug but comfortable.
+- Wait until the heart rate status icon is solid before starting an activity.
+- Warm up for 5 to 10 minutes and get a heart rate reading before starting
+  an activity (warm up indoors when it is cold).
+- Rinse the watch with fresh water after each workout.
+
+What this means for researchers: many of these tips are worth adding to
+participant onboarding materials, since a loose or dirty sensor is a common
+cause of poor-quality heart rate and HRV data.
+
+
+PART 2: DESIGNING ECOLOGICAL MOMENTARY ASSESSMENTS (EMAs)
+
+2.1 What EMA is
+Ecological momentary assessment asks participants short questions about
+their current state (for example mood, stress or behavior) repeatedly
+throughout the day, in their everyday environment, usually through a
+smartphone app. Because questions are asked in the moment, EMA reduces recall
+bias compared with retrospective questionnaires.
+
+2.2 Key design decisions
+When designing an EMA protocol, researchers need to decide:
+- How many study days the protocol runs.
+- How many prompts to send per day, and whether they are sent at fixed or
+  random times (time-contingent), or triggered by an event such as a
+  participant reporting a behavior (event-contingent).
+- How many questions each survey has and what response scale is used (for
+  example a slider or a Likert-type scale).
+- How participants are compensated (for example per completed survey, or
+  based on the percentage of surveys completed).
+
+The right prompt frequency depends on the research question. States that
+change quickly, such as anxiety, may need more frequent prompts than more
+stable states. More prompts give richer data but add participant burden.
+
+2.3 What the evidence says about compliance
+Compliance means the percentage of scheduled prompts that participants
+complete. Many studies aim for about 80%. Dropout means participants who
+leave the study early.
+
+- A meta-analysis of 477 articles (496 samples, 677,536 participants in
+  total) across many fields of psychology and related disciplines found that
+  the average EMA study scheduled 6 assessments per day, lasted 7 days and
+  obtained 79% compliance. Studies with more assessments per day tended to
+  run for fewer days, but the number of assessments did not predict
+  compliance or dropout. Compliance was significantly higher in studies that
+  offered financial incentives. Other design and sample characteristics had
+  little effect. (Wrzus & Neubauer, 2023)
+
+- A randomized factorial experiment with 411 US adults over 28 days tested
+  5 design factors at once: 15 vs. 25 questions per survey, 2 vs. 4 prompts
+  per day, $1 per survey vs. percentage-based payment, fixed vs. random
+  prompt times, and slider vs. Likert-type response scales. Overall
+  compliance was 83.8%, and none of the design factors had a significant
+  effect on compliance. Older age, no history of substance use and no current
+  depression were associated with higher completion. Higher app usability
+  scores were associated with better compliance, and compliance was slightly
+  higher on weekdays than weekends and in the evening than the morning.
+  (Businelle et al., 2024)
+
+2.4 Practical recommendations
+Based on the studies above:
+- Within the ranges studied, prompt frequency and survey length can be
+  chosen to fit the research question, rather than kept as low as possible
+  for the sake of compliance.
+- Offer financial incentives. Across hundreds of studies, paying
+  participants was linked to higher compliance.
+- Invest in app usability. An easy, reliable app was linked to better
+  compliance in a controlled experiment.
+- Expect lower compliance in some groups (for example younger participants
+  or people with current depression) and plan extra support for them.
+- Report compliance transparently: explain how compliance was defined,
+  report it by study day and wave, and describe whether any factors predicted
+  missed prompts.
+
+
+SOURCES
+
+Garmin owner's manuals (retrieved September 2026):
+- Heart Rate Variability and Stress Level, vivoactive 4/4S Owner's Manual.
+  https://www8.garmin.com/manuals/webhelp/vivoactive4_4S/EN-US/GUID-9282196F-D969-404D-B678-F48A13D8D0CB.html
+- Body Battery, vivoactive 5 Owner's Manual.
+  https://www8.garmin.com/manuals/webhelp/GUID-5D183A14-BB43-4A9B-B441-5F824214CE40/EN-US/GUID-87E1392B-2C55-40B7-A1FF-3AB9252DA0A0.html
+- Tips for Erratic Heart Rate Data, Instinct Owner's Manual.
+  https://www8.garmin.com/manuals/webhelp/instinct/EN-US/GUID-08BC6CE7-EB8F-4392-9B7D-714B54D19499.html
+
+Research:
+- Wrzus, C., & Neubauer, A. B. (2023). Ecological momentary assessment: a
+  meta-analysis on designs, samples, and compliance across research fields.
+  Assessment, 30(3), 825-846. https://doi.org/10.1177/10731911211067538
+- Businelle, M. S., Hebert, E. T., Shi, D., et al. (2024). Investigating
+  best practices for ecological momentary assessment: nationwide factorial
+  experiment. Journal of Medical Internet Research, 26, e50275.
+  https://pmc.ncbi.nlm.nih.gov/articles/PMC11347889/

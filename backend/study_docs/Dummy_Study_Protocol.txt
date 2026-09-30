@@ -1,0 +1,127 @@
+DUMMY STUDY PROTOCOL: PASSIVE SENSING WITH A SMARTWATCH AND SMARTPHONE
+
+NOTE: This is a fictional example document included so that the study-documents
+search in GLOSS has something to work with. It does not describe a real study.
+All names, contacts and procedures below are made up. Replace this file with
+your own study documents (any .txt file in this folder is picked up).
+See Public_Reference_Garmin_and_EMA.txt for background from public sources.
+
+
+1. STUDY OVERVIEW
+
+Study title: Everyday Wellbeing Sensing Study (example)
+Principal Investigator: Dr. Jane Smith, Example University
+Study contact: study-team@example.org
+Duration: 4 weeks of passive data collection per participant
+
+Purpose: To understand how everyday behaviors such as physical activity, sleep,
+phone use and stress relate to self-reported mood and wellbeing. Participants
+wear a Garmin smartwatch and install a study app on their iPhone. Both devices
+collect data passively in the background, and participants answer short
+surveys (EMAs) on their phone a few times a day.
+
+
+2. ELIGIBILITY
+
+- Adults aged 18 or older
+- Own an iPhone running a recent version of iOS
+- Willing to wear a smartwatch during the day and, if comfortable, at night
+- Able to charge the watch and phone regularly
+
+
+3. DEVICES
+
+3.1 Garmin smartwatch
+Participants receive a Garmin watch that is paired with the Garmin Connect app
+and linked to the study platform. The watch is worn on the non-dominant wrist,
+above the wrist bone, snug but comfortable.
+
+3.2 Smartphone app
+Participants install the study app on their own iPhone. The app runs in the
+background and uploads data when the phone has an internet connection. It
+also delivers EMA surveys as notifications.
+
+
+4. DATA COLLECTED
+
+4.1 From the Garmin watch
+- Heart rate (HR): beats per minute, sampled every few seconds while worn.
+  Each sample has a status such as VALID or SEARCHING (the sensor is still
+  locking on to a reading).
+- Beat-to-beat intervals (IBI / BBI): the time in milliseconds between
+  consecutive heartbeats. Used to estimate heart rate variability and stress.
+- Steps: step counts per interval and the running daily total.
+- Stress: Garmin's stress score (0-100) derived from heart rate variability
+  while the participant is inactive. Scores of 0-25 are rest, 26-50 low,
+  51-75 medium and 76-100 high stress.
+- Body Battery: Garmin's estimate of energy reserves (5-100), which drains
+  with activity and stress and recharges with rest and sleep.
+
+4.2 From the iPhone
+- Activity: the phone's motion classification (stationary, walking, running,
+  automotive, cycling) with a confidence level.
+- Steps and distance: steps, distance and floors climbed recorded by the phone.
+- Battery: battery level and charging state.
+- Screen brightness: the screen brightness level from 0 to 1.
+- Lock / unlock events: when the phone is locked and unlocked, used to
+  estimate how often and how long the phone is used.
+- App usage: which app is in the foreground and when it is opened and closed.
+- Call log metadata: the time, type (for example dialing, incoming,
+  connected, ended) and duration of calls. Phone numbers, contact names and
+  call content are NOT collected.
+- Wi-Fi: whether the phone is connected to Wi-Fi. Network identifiers are
+  hashed or removed before analysis.
+
+4.3 Surveys (EMA)
+Participants receive 3 short surveys per day (morning, afternoon and evening)
+at random times within fixed windows. Each survey takes about 1-2 minutes and
+asks about current mood, stress, energy, social interaction and sleep quality
+(morning survey only). A survey expires 60 minutes after it is sent.
+
+
+5. PARTICIPANT RESPONSIBILITIES
+
+- Wear the watch as much as possible, ideally at least 12 hours per day.
+- Charge the watch every 3-5 days. Charging while showering or at a desk
+  reduces time without data.
+- Keep the phone app installed and do not force-close it.
+- Keep Bluetooth on so the watch can sync with the phone.
+- Answer as many EMA surveys as possible. The target is at least 70%.
+
+
+6. DATA QUALITY AND COMPLIANCE CHECKS
+
+The study team reviews each participant's data a few times a week:
+- Watch worn time vs. watch on time: if the watch is on but worn time is low,
+  the participant may not be wearing it. The team sends a friendly reminder.
+- Data gaps: no watch data for more than 24 hours usually means the watch
+  needs charging or has not synced. No phone data usually means the app was
+  closed or the phone was off.
+- EMA compliance: if a participant answers fewer than half of their surveys
+  in a week, the team checks in to see whether notification settings or
+  survey timing need adjusting.
+
+
+7. TROUBLESHOOTING
+
+- Watch not syncing: open the Garmin Connect app, check Bluetooth is on and
+  pull down to refresh.
+- App not collecting data: open the study app once so it can resume, and
+  check that Location, Motion & Fitness and Background App Refresh
+  permissions are enabled.
+- Not receiving surveys: check that notifications for the study app are
+  allowed and that Focus / Do Not Disturb is not blocking them.
+
+
+8. PRIVACY
+
+Data is stored on secure servers and linked to a study ID (for example
+test004), not to the participant's name. Only the study team can access
+identifiable information. Participants can pause data collection or withdraw
+from the study at any time by contacting study-team@example.org.
+
+
+9. COMPENSATION
+
+Participants receive $10 per week of participation, plus a $20 bonus for
+completing at least 70% of EMA surveys over the full study.

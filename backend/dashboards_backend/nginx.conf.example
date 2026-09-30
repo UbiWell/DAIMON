@@ -1,0 +1,72 @@
+server {
+    listen 80;
+    listen [::]:80;
+    server_name your-domain.example.com;
+
+    # Socket.IO WebSocket connections (must come before /api)
+    location /socket.io/ {
+        proxy_pass http://127.0.0.1:8000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_buffering off;
+        proxy_read_timeout 300s;
+    }
+    
+    # Flask API
+    location /api {
+        proxy_pass http://127.0.0.1:8000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_connect_timeout 300s;
+        proxy_send_timeout 300s;
+        proxy_read_timeout 300s;
+        
+        # CRITICAL: Prevent caching of API responses (especially dashboard state)
+        add_header Cache-Control "no-store, no-cache, must-revalidate, max-age=0" always;
+        add_header Pragma "no-cache" always;
+        add_header Expires "0" always;
+    }
+    
+    # Static images
+    location /static/images/ {
+        alias /path/to/GLOSS/dashboards_backend/static/images/;
+        expires 1h;
+        add_header Cache-Control "public";
+    }
+    
+    
+    # React dashboard assets - allow caching
+    location /gloss-dashboard/assets/ {
+        alias /path/to/gloss-dashboard/dist/assets/;
+        expires 1d;
+        add_header Cache-Control "public, immutable";
+    }
+    
+    # React dashboard at /gloss-dashboard (catch-all for SPA routing)
+    location /gloss-dashboard/ {
+        alias /path/to/gloss-dashboard/dist/;
+        index index.html;
+        try_files $uri $uri/ /gloss-dashboard/index.html;
+        
+        # CRITICAL: Prevent caching of HTML files
+        # The assets location below will override this for /assets/ files
+        # This ensures index.html always loads fresh
+        add_header Cache-Control "no-store, no-cache, must-revalidate, max-age=0" always;
+        add_header Pragma "no-cache" always;
+        add_header Expires "0" always;
+    }
+    
+    # Redirect /gloss-dashboard → /gloss-dashboard/
+    location = /gloss-dashboard {
+        return 301 /gloss-dashboard/;
+    }
+
+}
+
